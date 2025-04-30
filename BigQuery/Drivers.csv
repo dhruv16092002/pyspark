@@ -1,0 +1,2 @@
+Database,Maven
+BigQuery,com.google.cloud.spark:spark-3.5-bigquery:0.41.0
