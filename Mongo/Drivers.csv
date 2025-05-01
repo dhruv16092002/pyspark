@@ -1,0 +1,5 @@
+Database,Maven
+PostgresSQL,org.postgresql:postgresql:42.2.24
+MySQL,mysql-connector-java:8.0.32
+MongoDB,org.mongodb.spark:mongo-spark-connector_2.12:3.0.1
+Hadoop,org.apache.hadoop:hadoop-azure:3.4.1
