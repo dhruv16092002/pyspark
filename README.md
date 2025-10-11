@@ -65,8 +65,7 @@ The architecture supports **plug-and-play connectivity**, allowing you to read f
 - **Apache Spark (PySpark)** – Core for distributed data processing  
 - **Maven (MVN)** – For managing external JDBC connectors and JAR dependencies  
 - **Python (pip)** – For installing and managing packages  
-- **Docker** – Used for local testing of databases  
-- **Cloud Platforms** – AWS, Azure, GCP  
+- **Cloud Platforms** – Databricks 
 
 ---
 
