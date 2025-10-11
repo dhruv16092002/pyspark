@@ -8,7 +8,7 @@ The architecture supports **plug-and-play connectivity**, allowing you to read f
 
 ## 🏗️ ETL Architecture Overview  
 
-![ETL Architecture in Databricks](./assets/etl_architecture.png)  
+![ETL Architecture in Databricks](./ETLDatabricks.drawio.png)  
 
 **Core Workflow:**  
 1. **Extract** – Read data from multiple data sources (SQL, NoSQL, Cloud, APIs, etc.) using connectors and drivers.  
