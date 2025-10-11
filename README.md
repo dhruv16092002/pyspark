@@ -1,86 +1,79 @@
-# PySpark Data Engineering Practice in databricks
+# 🚀 PySpark ETL Architecture in Databricks  
 
-This project showcases my hands-on experience using **PySpark** for building data pipelines and performing data transformations. The focus is on reading data from various **source systems**, applying **data cleaning and transformation logic**, and writing it to multiple **sink systems**.
+This project demonstrates an **end-to-end ETL (Extract, Transform, Load) architecture** implemented in **Databricks using PySpark**. It is designed to connect with multiple **data sources**, perform **data transformation and business logic**, and load processed data into various **target systems** efficiently.  
 
-## 📁 Project Structure
-
-- `/mongo` – There is multiple Jupyter notebooks for mongodb connection and data cleaning
-- `/Delta` – Folder containing the delta table in databricks and stored into azure blob storage
-- `/mysql` – There is multiple Jupyter notebooks for Mysql connection and data cleaning
-- `/S3` – There is multiple Jupyter notebooks for Aws-S3 connection and data cleaning
-- `/BigQuery` – There is multiple Jupyter notebooks for Big Query (GCP) connection and data cleaning
-
-## ✅ Key Features
-
-### Data Sources (Read)
-
-- MySQL
-- MongoDB
-- PostgreSQL
-- Azure Blob Storage
-- s3
-- BigQuery
-
-### Data Cleaning & Transformation
-
-- Performed using PySpark DataFrame API
-- SQL and NoSQL data cleaning handled with custom logic
-- Schema validation and null handling
-- String manipulation and date formatting
-- Deduplication and standardization
-
-### Data Sinks (Write)
-
-- MySQL
-- MongoDB
-- PostgreSQL
-- Azure Blob Storage (CSV/Parquet)
-- s3
-- BigQuery
-
-### Tools & Platforms
-
-- Apache Spark (PySpark)
-- Databricks (Notebook experimentation and PySpark SQL usage)
-- Jupyter Notebook for interactive development
-- Docker and local database setup
-
-## 🧪 Practice Use Cases
-
-- Explored usage of PySpark with NoSQL data models (MongoDB)
-- Wrote utility functions to convert raw JSON, CSV, and nested structures
-- Migrated data across SQL and NoSQL systems with proper formatting
-
-## 🚀 How to Run
-
-1. Clone the repository
-2. Ensure you have the required environments and drivers for databases
-3. Update database connection strings in the notebook or config files
-4. Run the Jupyter notebook: `pyspark_data_pipeline.ipynb`
-
-## 📌 Requirements
-
-- Python 3.10+
-- PySpark
-- MongoDB Connector for Spark
-- Maven drivers for MySQL and PostgreSQL
-- Azure Storage SDK (for blob access)
-- Jupyter Notebook
-
-## 🔧 Future Enhancements
-
-- Modularize the notebook into Python scripts and functions
-- Add unit tests for transformation logic
-- Schedule jobs using Apache Airflow or Azure Data Factory
-
-## 📚 Learnings
-
-- Deepened understanding of PySpark DataFrames and transformations
-- Worked with both SQL and NoSQL sources in a unified PySpark pipeline
-- Improved data cleaning strategies across diverse data formats
-- Gained experience with Databricks for Spark-based analytics
+The architecture supports **plug-and-play connectivity**, allowing you to read from any source system and write to any target database or cloud storage — all within Databricks notebooks.  
 
 ---
 
-Feel free to raise any issues or suggestions to improve this pipeline.
+## 🏗️ ETL Architecture Overview  
 
+![ETL Architecture in Databricks](./assets/etl_architecture.png)  
+
+**Core Workflow:**  
+1. **Extract** – Read data from multiple data sources (SQL, NoSQL, Cloud, APIs, etc.) using connectors and drivers.  
+2. **Transform** – Clean, validate, and enrich the data using PySpark DataFrame and SQL APIs.  
+3. **Load** – Write the processed data into target systems like Delta tables, MySQL, PostgreSQL, BigQuery, etc.  
+
+---
+
+## 📁 Project Structure  
+
+| Folder | Description |
+|--------|--------------|
+| `/Mongo` | Contains multiple Databricks notebooks for MongoDB data extraction, transformation, and loading. |
+| `/Mysql` | Includes notebooks for MySQL data ingestion, cleaning, and writing to target systems. |
+| `/S3` | Contains notebooks for AWS S3 read/write operations using PySpark. |
+| `/BigQuery` | Notebooks for reading and writing data to Google BigQuery (GCP). |
+| `/Delta` | Notebooks demonstrating creation and management of Delta tables in Databricks (stored in Azure Blob or ADLS). |
+| `/DynamicColumnMapping` | Logic to handle schema mapping dynamically between source and target systems. |
+
+---
+
+## ✅ Key Features  
+
+### 🔹 Data Sources (Extract)  
+- MySQL  
+- MongoDB  
+- PostgreSQL  
+- Amazon S3  
+- Azure Blob Storage  
+- Google BigQuery  
+- Oracle  
+- FTP and APIs  
+
+### 🔹 Data Cleaning & Transformation (Transform)  
+- Built using **PySpark DataFrame API** and **SQL transformations**  
+- Schema validation, null handling, deduplication, and standardization  
+- Date and string formatting for consistent schema design  
+- Support for **custom business logic** directly inside Databricks notebooks  
+- Dynamic column mapping across data systems  
+
+### 🔹 Data Targets (Load)  
+- Delta Tables (Databricks / Azure)  
+- MySQL  
+- PostgreSQL  
+- BigQuery  
+- MongoDB  
+- Amazon S3 / Azure Blob Storage (CSV/Parquet formats)  
+
+---
+
+## ⚙️ Tools & Technologies  
+
+- **Databricks** – Notebook-based PySpark environment  
+- **Apache Spark (PySpark)** – Core for distributed data processing  
+- **Maven (MVN)** – For managing external JDBC connectors and JAR dependencies  
+- **Python (pip)** – For installing and managing packages  
+- **Docker** – Used for local testing of databases  
+- **Cloud Platforms** – AWS, Azure, GCP  
+
+---
+
+## 🧪 Practice Use Cases  
+
+- Data migration between SQL and NoSQL systems  
+- Transformation of nested JSON and semi-structured data  
+- Unified PySpark pipeline for heterogeneous data formats  
+- Incremental data load with schema evolution handling  
+- Writing ETL logic in Databricks notebooks for automation and testing  
